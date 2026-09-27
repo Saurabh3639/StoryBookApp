@@ -10,32 +10,64 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# next.js build and outputs
 /.next/
 /out/
-
-# production
 /build
+/dist
 
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
+# environment and secrets (keep secrets safe, commit template only)
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
 
 # vercel
 .vercel
 
-# typescript
+# typescript & cache
 *.tsbuildinfo
 next-env.d.ts
+.turbo
+
+# testing & coverage
+/coverage
+*.lcov
+.nyc_output
+
+# debug and logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# operating systems
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# IDEs and editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# security & temporary files
+*.pem
+*.tmp
+*.bak
